@@ -1,0 +1,4 @@
+#!/bin/sh
+# Wallpaper setter script for feh
+# Automatically uses the first image found in ~/Pictures/Wallpapers/
+feh --no-fehbg --bg-scale "$(find ~/Pictures/Wallpapers/ -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) | head -n 1)"
