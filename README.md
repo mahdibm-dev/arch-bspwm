@@ -1,3 +1,5 @@
+![Screenshot of Arch Linux + bspwm configuration](2025-11-10_08-01_1.png)
+
 # Arch Linux + bspwm Configuration
 
 This repository contains my custom configuration files for a minimal and efficient Arch Linux setup using bspwm as the window manager.
