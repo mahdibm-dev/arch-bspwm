@@ -148,20 +148,21 @@ This repository contains my custom configuration files for a minimal and efficie
 1. Clone this repository:
 
    ```bash
-   git clone git@github.com:mahdibm-dev/arch-bspwm.git
+   git clone https://github.com/mahdibm-dev/arch-bspwm.git
    ```
 
 2. Install required packages:
 
    ```bash
-   sudo pacman -S bspwm sxhkd polybar alacritty thunar gvfs flameshot dunst \
-                  network-manager-applet feh i3lock pulseaudio dmenu
+   sudo pacman -S polybar alacritty thunar flameshot dunst \
+                  network-manager-applet feh i3lock pulseaudio dmenu rofi
    ```
 
 3. Copy configuration files:
 
    ```bash
-   cp -r .config/* ~/.config/
+   mkdir -p ~/.config
+   cp -r arch-bspwm/.config/* ~/.config/
    ```
 
 4. Make scripts executable:

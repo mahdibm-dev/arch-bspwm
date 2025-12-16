@@ -22,14 +22,18 @@ super + Return
 super + x
 	i3lock -c 000000
 
+# Switch keyboard layout (US/Arabic)
+super + space
+	setxkbmap -layout "us,ara" -option "grp:alt_shift_toggle"
+
 # Screenshot with flameshot
 # Full screen screenshot - auto save to Screenshots folder
 Print
-	flameshot full -p ~/Pictures/Screenshots
+	flameshot full -p ~/screenshots
 
 # Interactive screenshot (select area) - auto save to Screenshots folder
 super + Print
-	flameshot gui -p ~/Pictures/Screenshots
+	flameshot gui -p ~/screenshots
 
 # Audio controls
 #Raises volume
@@ -56,9 +60,12 @@ XF86AudioMute
 super + e
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-# program launcher
-super + @space
-	dmenu_run
+#dmenu
+super + r
+	dmenu_run 
+
+super + d
+	rofi -show drun -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape

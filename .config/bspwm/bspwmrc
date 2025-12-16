@@ -4,14 +4,14 @@
 # Start sxhkd (the hotkey daemon)
 sxhkd &
 
+# Set keyboard layout (US and Arabic with Alt+Shift toggle)
+setxkbmap -layout "us,ara" -option "grp:alt_shift_toggle" &
+
 # Launch Polybar
 ~/.config/polybar/launch.sh &
 
 # Start dunst notification daemon
 dunst &
-
-# Start flameshot for screenshots
-flameshot &
 
 # Start network manager applet
 nm-applet &
@@ -19,7 +19,7 @@ nm-applet &
 # Set wallpaper with feh (restore last wallpaper)
 [ -f ~/.config/feh/fehbg ] && ~/.config/feh/fehbg &
 
-bspc monitor -d B V W 4 5 6 7 8 9 10
+bspc monitor -d B V 3 4 5 6 7 8 9 10
 
 #BSPWM configuration
 #bspc config border_radius        8
@@ -29,4 +29,7 @@ bspc config single_monocle       true
 bspc config split_ratio          0.618
 bspc config normal_border_color "#808080"
 bspc config focused_border_color "#ffffff"
+bspc config focus_follows_pointer true
 
+bspc rule -a Google-chrome desktop='^1'
+bspc rule -a Code desktop='^2'
