@@ -4,6 +4,54 @@
 
 This repository contains my custom configuration files for a minimal and efficient Arch Linux setup using bspwm as the window manager.
 
+## Installation
+
+### Fresh Arch Linux Installation
+
+If you're installing Arch Linux from scratch, follow the complete installation guide in [arch-install.md](arch-install.md). It covers:
+
+- Network setup (Wi-Fi/Ethernet)
+- Running `archinstall`
+- Post-installation setup (Git, Yay, Chrome, VS Code, and all required packages)
+- Configuration file deployment
+- System setup
+
+### Adding to Existing Arch System
+
+If you already have Arch Linux installed:
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/mahdibm-dev/arch-bspwm.git
+   ```
+
+2. Install required packages:
+
+   ```bash
+   sudo pacman -S polybar alacritty thunar flameshot dunst \
+                  network-manager-applet feh i3lock pulseaudio dmenu rofi
+   ```
+
+3. Copy configuration files:
+
+   ```bash
+   mkdir -p ~/.config
+   cp -r arch-bspwm/.config/* ~/.config/
+   ```
+
+4. Make scripts executable:
+
+   ```bash
+   chmod +x ~/.config/bspwm/bspwmrc
+   chmod +x ~/.config/polybar/launch.sh
+   chmod +x ~/.config/feh/fehbg
+   ```
+
+5. Place a wallpaper in `~/Pictures/Wallpapers/`
+
+6. Restart bspwm or log out and log back in
+
 ## Programs and Utilities
 
 ### Window Manager & Core
@@ -142,54 +190,6 @@ This repository contains my custom configuration files for a minimal and efficie
 - **Purpose**: Code editor
 - **Package**: `code`
 - **Auto-opens**: Workspace V
-
-## Installation
-
-### Fresh Arch Linux Installation
-
-If you're installing Arch Linux from scratch, follow the complete installation guide in [arch-install.md](arch-install.md). It covers:
-
-- Network setup (Wi-Fi/Ethernet)
-- Running `archinstall`
-- Post-installation setup (Git, Yay, Chrome, VS Code, and all required packages)
-- Configuration file deployment
-- System setup
-
-### Adding to Existing Arch System
-
-If you already have Arch Linux installed:
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/mahdibm-dev/arch-bspwm.git
-   ```
-
-2. Install required packages:
-
-   ```bash
-   sudo pacman -S polybar alacritty thunar flameshot dunst \
-                  network-manager-applet feh i3lock pulseaudio dmenu rofi
-   ```
-
-3. Copy configuration files:
-
-   ```bash
-   mkdir -p ~/.config
-   cp -r arch-bspwm/.config/* ~/.config/
-   ```
-
-4. Make scripts executable:
-
-   ```bash
-   chmod +x ~/.config/bspwm/bspwmrc
-   chmod +x ~/.config/polybar/launch.sh
-   chmod +x ~/.config/feh/fehbg
-   ```
-
-5. Place a wallpaper in `~/Pictures/Wallpapers/`
-
-6. Restart bspwm or log out and log back in
 
 ## Workspace Layout
 
