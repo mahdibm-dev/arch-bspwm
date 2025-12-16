@@ -145,6 +145,20 @@ This repository contains my custom configuration files for a minimal and efficie
 
 ## Installation
 
+### Fresh Arch Linux Installation
+
+If you're installing Arch Linux from scratch, follow the complete installation guide in [arch-install.md](arch-install.md). It covers:
+
+- Network setup (Wi-Fi/Ethernet)
+- Running `archinstall`
+- Post-installation setup (Git, Yay, Chrome, VS Code, and all required packages)
+- Configuration file deployment
+- System setup
+
+### Adding to Existing Arch System
+
+If you already have Arch Linux installed:
+
 1. Clone this repository:
 
    ```bash
